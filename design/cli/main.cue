@@ -17,6 +17,9 @@ import (
 	Long:       Short
 	CustomHelp: #RootCustomHelp
 
+	// from the generated output dir (cmd/c8s/box)
+	// EmbedDir: "../../../cue.mod/pkg"
+
 	OmitRun: true
 
 	PersistentPrerun:     true

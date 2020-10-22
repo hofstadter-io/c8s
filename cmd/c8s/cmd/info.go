@@ -5,6 +5,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+
+	"github.com/hofstadter-io/c8s/pkg/info"
 )
 
 var infoLong = `get information about kubernetes resource schemas`
@@ -12,7 +14,11 @@ var infoLong = `get information about kubernetes resource schemas`
 func InfoRun(args []string) (err error) {
 
 	// you can safely comment this print out
-	fmt.Println("not implemented")
+	// fmt.Println("not implemented")
+
+	if len(args) == 0 || args[0] == "list" {
+		info.List()
+	}
 
 	return err
 }
