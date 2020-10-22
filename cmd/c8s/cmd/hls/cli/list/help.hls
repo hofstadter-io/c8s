@@ -1,0 +1,7 @@
+### Test "list --help" prints help
+call __c8s list --help
+
+### Test "list -h" prints help
+call __c8s list -h
+
+

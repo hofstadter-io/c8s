@@ -1,0 +1,7 @@
+### Test "history --help" prints help
+call __c8s history --help
+
+### Test "history -h" prints help
+call __c8s history -h
+
+

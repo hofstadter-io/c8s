@@ -1,0 +1,10 @@
+module github.com/hofstadter-io/c8s
+
+cue master
+
+require (
+  github.com/hofstadter-io/hofmod-cli v0.6.3
+)
+
+replace github.com/hofstadter-io/hof        => ../hof
+replace github.com/hofstadter-io/hofmod-cli => ../mods/cli

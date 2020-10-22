@@ -1,0 +1,7 @@
+### Test "test --help" prints help
+call __c8s test --help
+
+### Test "test -h" prints help
+call __c8s test -h
+
+

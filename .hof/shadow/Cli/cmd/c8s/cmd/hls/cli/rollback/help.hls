@@ -1,0 +1,7 @@
+### Test "rollback --help" prints help
+call __c8s rollback --help
+
+### Test "rollback -h" prints help
+call __c8s rollback -h
+
+

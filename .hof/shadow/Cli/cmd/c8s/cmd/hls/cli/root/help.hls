@@ -1,0 +1,13 @@
+### Test "c8s --help" prints help
+call __c8s --help
+
+### Test "c8s -h" prints help
+call __c8s -h
+
+### Test "c8s help" prints help
+call __c8s help
+
+
+### Test "c8s" (without any args) prints help
+call __c8s
+

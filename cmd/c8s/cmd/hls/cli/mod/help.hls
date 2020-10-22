@@ -1,0 +1,9 @@
+### Test "mod --help" prints help
+call __c8s mod --help
+
+### Test "mod -h" prints help
+call __c8s mod -h
+
+### Test "mod" (without any args) prints help
+call __c8s mod
+

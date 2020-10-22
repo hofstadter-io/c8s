@@ -1,0 +1,7 @@
+### Test "lint --help" prints help
+call __c8s lint --help
+
+### Test "lint -h" prints help
+call __c8s lint -h
+
+

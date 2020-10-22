@@ -1,0 +1,7 @@
+### Test "env --help" prints help
+call __c8s env --help
+
+### Test "env -h" prints help
+call __c8s env -h
+
+

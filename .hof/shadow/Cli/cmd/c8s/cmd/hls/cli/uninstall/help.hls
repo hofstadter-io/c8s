@@ -1,0 +1,7 @@
+### Test "uninstall --help" prints help
+call __c8s uninstall --help
+
+### Test "uninstall -h" prints help
+call __c8s uninstall -h
+
+

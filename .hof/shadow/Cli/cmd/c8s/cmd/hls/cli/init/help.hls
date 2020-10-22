@@ -1,0 +1,7 @@
+### Test "init --help" prints help
+call __c8s init --help
+
+### Test "init -h" prints help
+call __c8s init -h
+
+

@@ -1,0 +1,8 @@
+FROM scratch
+MAINTAINER Hofstadter, Inc <open-source@hofstadter.io>
+
+COPY c8s /
+ENTRYPOINT ["/c8s"]
+
+VOLUME ["/work"]
+WORKDIR /work

@@ -1,0 +1,7 @@
+### Test "upgrade --help" prints help
+call __c8s upgrade --help
+
+### Test "upgrade -h" prints help
+call __c8s upgrade -h
+
+

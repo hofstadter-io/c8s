@@ -1,0 +1,8 @@
+FROM debian:jessie
+MAINTAINER Hofstadter, Inc <open-source@hofstadter.io>
+
+COPY c8s /usr/bin/local
+ENTRYPOINT ["c8s"]
+
+VOLUME ["/work"]
+WORKDIR /work

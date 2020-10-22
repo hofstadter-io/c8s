@@ -1,0 +1,7 @@
+### Test "install --help" prints help
+call __c8s install --help
+
+### Test "install -h" prints help
+call __c8s install -h
+
+
