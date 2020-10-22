@@ -120,6 +120,7 @@ func RootInit() {
 	RootCmd.AddCommand(StatusCmd)
 	RootCmd.AddCommand(LintCmd)
 	RootCmd.AddCommand(TestCmd)
+	RootCmd.AddCommand(InfoCmd)
 	RootCmd.AddCommand(EnvCmd)
 	RootCmd.AddCommand(HackCmd)
 
@@ -177,7 +178,7 @@ const RootCustomHelp = `c8s - Kubernetes resource and package manager
 Usage:
   c8s [flags] [command] [args]
 
-Initialize a new c8s chart and work with modules:
+Initialize a new chart and work with modules:
   init                  create an empty module or initialize an existing directory to one
   mod                   dependency management for c8s modules
 
@@ -191,6 +192,9 @@ Manage c8s charts and workspaces:
   status                get the status a set of charts
   lint                  lint a set of charts
   test                  test a set of charts
+
+Get information about kubernetes resource schemas:
+  info                  get information about kubernetes resource schemas
 
 	(repo commands t.b.d.)
 

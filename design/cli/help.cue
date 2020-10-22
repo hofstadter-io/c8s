@@ -12,7 +12,7 @@ c8s - Kubernetes resource and package manager
 Usage:
   c8s [flags] [command] [args]
 
-Initialize a new c8s chart and work with modules:
+Initialize a new chart and work with modules:
   \(cmds.#InitCommand.Help)
   \(cmds.#ModCommand.Help)
 
@@ -26,6 +26,9 @@ Manage c8s charts and workspaces:
   \(cmds.#StatusCommand.Help)
   \(cmds.#LintCommand.Help)
   \(cmds.#TestCommand.Help)
+
+Get information about kubernetes resource schemas:
+  \(cmds.#InfoCommand.Help)
 
 	(repo commands t.b.d.)
 

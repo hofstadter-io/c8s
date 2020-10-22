@@ -42,6 +42,9 @@ import (
 		cmds.#LintCommand,
 		cmds.#TestCommand,
 
+		// kubernetes commands
+		cmds.#InfoCommand,
+
 		// repo commands t.b.d.
 
 		// other commands
