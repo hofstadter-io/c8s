@@ -1,0 +1,7 @@
+### Test "schema --help" prints help
+call __c8s schema --help
+
+### Test "schema -h" prints help
+call __c8s schema -h
+
+

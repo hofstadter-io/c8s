@@ -105,12 +105,11 @@ func RootInit() {
 
 	RootCmd.AddCommand(UpdateCmd)
 
-	RootCmd.AddCommand(VersionCmd)
-
 	RootCmd.AddCommand(CompletionCmd)
 
 	RootCmd.AddCommand(InitCmd)
 	RootCmd.AddCommand(ModCmd)
+	RootCmd.AddCommand(InfoCmd)
 	RootCmd.AddCommand(ListCmd)
 	RootCmd.AddCommand(InstallCmd)
 	RootCmd.AddCommand(UpgradeCmd)
@@ -120,7 +119,7 @@ func RootInit() {
 	RootCmd.AddCommand(StatusCmd)
 	RootCmd.AddCommand(LintCmd)
 	RootCmd.AddCommand(TestCmd)
-	RootCmd.AddCommand(InfoCmd)
+	RootCmd.AddCommand(SchemaCmd)
 	RootCmd.AddCommand(EnvCmd)
 	RootCmd.AddCommand(HackCmd)
 

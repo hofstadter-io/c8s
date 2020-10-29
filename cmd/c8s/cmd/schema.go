@@ -7,35 +7,35 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/hofstadter-io/c8s/cmd/c8s/flags"
-	"github.com/hofstadter-io/c8s/pkg/info"
+	"github.com/hofstadter-io/c8s/pkg/schema"
 )
 
-var infoLong = `get information about kubernetes resource schemas`
+var schemaLong = `get information about kubernetes resource schemas`
 
 func init() {
 
-	InfoCmd.Flags().BoolVarP(&(flags.InfoFlags.Details), "details", "D", false, "print nested definition details for schemas")
-	InfoCmd.Flags().BoolVarP(&(flags.InfoFlags.Extended), "extended", "E", false, "print extended schemas")
-	InfoCmd.Flags().BoolVarP(&(flags.InfoFlags.Comments), "comments", "C", false, "print comments with schemas")
+	SchemaCmd.Flags().BoolVarP(&(flags.SchemaFlags.Details), "details", "D", false, "print nested definition details for schemas")
+	SchemaCmd.Flags().BoolVarP(&(flags.SchemaFlags.Extended), "extended", "E", false, "print extended schemas")
+	SchemaCmd.Flags().BoolVarP(&(flags.SchemaFlags.Comments), "comments", "C", false, "print comments with schemas")
 }
 
-func InfoRun(args []string) (err error) {
+func SchemaRun(args []string) (err error) {
 
 	// you can safely comment this print out
 	// fmt.Println("not implemented")
 
-	err = info.Run(args, flags.InfoFlags)
+	err = schema.Run(args, flags.SchemaFlags)
 
 	return err
 }
 
-var InfoCmd = &cobra.Command{
+var SchemaCmd = &cobra.Command{
 
-	Use: "info [...resources]",
+	Use: "schema [...resources]",
 
 	Short: "get information about kubernetes resource schemas",
 
-	Long: infoLong,
+	Long: schemaLong,
 
 	PreRun: func(cmd *cobra.Command, args []string) {
 
@@ -46,7 +46,7 @@ var InfoCmd = &cobra.Command{
 
 		// Argument Parsing
 
-		err = InfoRun(args)
+		err = SchemaRun(args)
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
@@ -60,8 +60,8 @@ func init() {
 		return false
 	}
 
-	ohelp := InfoCmd.HelpFunc()
-	ousage := InfoCmd.UsageFunc()
+	ohelp := SchemaCmd.HelpFunc()
+	ousage := SchemaCmd.UsageFunc()
 	help := func(cmd *cobra.Command, args []string) {
 		if extra(cmd) {
 			return
@@ -75,7 +75,7 @@ func init() {
 		return ousage(cmd)
 	}
 
-	InfoCmd.SetHelpFunc(help)
-	InfoCmd.SetUsageFunc(usage)
+	SchemaCmd.SetHelpFunc(help)
+	SchemaCmd.SetUsageFunc(usage)
 
 }
