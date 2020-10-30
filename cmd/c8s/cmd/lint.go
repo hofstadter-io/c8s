@@ -5,14 +5,18 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+
+	"github.com/hofstadter-io/c8s/pkg/lint"
 )
 
 var lintLong = `lint a set of charts`
 
-func LintRun(entrypoints string) (err error) {
+func LintRun(entrypoints []string) (err error) {
 
 	// you can safely comment this print out
-	fmt.Println("not implemented")
+	// fmt.Println("not implemented")
+
+	err = schema.Run(entrypoints)
 
 	return err
 }
@@ -34,11 +38,9 @@ var LintCmd = &cobra.Command{
 
 		// Argument Parsing
 
-		var entrypoints string
+		var entrypoints []string
 
 		if 0 < len(args) {
-
-			entrypoints = args[0]
 
 		}
 

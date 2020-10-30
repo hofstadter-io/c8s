@@ -12,7 +12,7 @@ import (
 
 	Args: [{
 		Name:     "entrypoints"
-		Type:     "string"
+		Type:     "[]string"
 		Help:     "cuelang entrypoints, defaults to current directory"
 	}]
 }

@@ -17,8 +17,8 @@ import (
 	Long:       Short
 	CustomHelp: #RootCustomHelp
 
-	// from the generated output dir (cmd/c8s/box)
-	// EmbedDir: "../../../cue.mod/pkg"
+	// from the generated output dir (./box)
+	EmbedDir: "../cue.mod/gen/"
 
 	OmitRun: true
 
@@ -33,8 +33,10 @@ import (
 		// chart and modules
 		cmds.#InitCommand,
 		cmds.#ModCommand,
+		// cmds.#GetCommand,
 
 		// manage charts
+		cmds.#InfoCommand,
 		cmds.#ListCommand,
 		cmds.#InstallCommand,
 		cmds.#UpgradeCommand,
@@ -46,7 +48,7 @@ import (
 		cmds.#TestCommand,
 
 		// kubernetes commands
-		cmds.#InfoCommand,
+		cmds.#SchemaCommand,
 
 		// repo commands t.b.d.
 
@@ -68,7 +70,6 @@ import (
 	// Addons
 	//
 	Releases: #CliReleases
-	Updates:  true
 
 	EnablePProf: true
 }

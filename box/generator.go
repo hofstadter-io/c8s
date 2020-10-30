@@ -16,7 +16,7 @@ import (
 
 const (
 	blobFileName string = "blob.go"
-	embedFolder  string = "../cue.mod/gen/k8s.io/"
+	embedFolder  string = "../cue.mod/gen/"
 )
 
 var conv = map[string]interface{}{"conv": fmtByteSlice}

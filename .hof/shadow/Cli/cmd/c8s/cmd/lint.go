@@ -9,7 +9,7 @@ import (
 
 var lintLong = `lint a set of charts`
 
-func LintRun(entrypoints string) (err error) {
+func LintRun(entrypoints []string) (err error) {
 
 	// you can safely comment this print out
 	fmt.Println("not implemented")
@@ -34,11 +34,9 @@ var LintCmd = &cobra.Command{
 
 		// Argument Parsing
 
-		var entrypoints string
+		var entrypoints []string
 
 		if 0 < len(args) {
-
-			entrypoints = args[0]
 
 		}
 

@@ -105,6 +105,8 @@ func RootInit() {
 
 	RootCmd.AddCommand(UpdateCmd)
 
+	RootCmd.AddCommand(VersionCmd)
+
 	RootCmd.AddCommand(CompletionCmd)
 
 	RootCmd.AddCommand(InitCmd)
